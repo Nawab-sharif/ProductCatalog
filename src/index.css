@@ -1,13 +1,238 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Css Reset */
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: rgba(86, 206, 198, 0.815);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navbaar CSS */
+.navbar{
+  height: 6rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2rem 1fr 2fr 2fr 2rem;
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 50px 80px -20px , rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.navbar img{
+  height: 60px;
+  border-radius: 15px;
+  display: grid;
+  grid-column: 2/3;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 3.6rem;
+}
+.navbar h1{
+  display: grid;
+  grid-column: 3/4;
+  justify-content:start;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight:bold;
+  margin-bottom: 3.6rem;
+}
+
+.navbar .listnings{
+  grid-column: 4/5;
+}
+
+.navbar .listnings ul{
+  height: 6rem;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.navbar .listnings ul li{
+font-size: 22px;
+margin: 20px;
+font-weight: bold;
+}
+
+.navbar .listnings ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .listnings ul li a:hover{
+  color: white;
+  background: black;
+  border-radius: 10px;
+}
+
+/* Home Page CSS */
+.home{
+  height: 500px;
+  width: 600px;
+  margin-top: 5%;
+  margin-left: 30%;
+  box-shadow: 0.8rem 1.2rem 0.8rem rgba(17, 16, 16, 0.484);
+  background-color: white;
+  border-radius: 20px;
+}
+
+.home h2{
+  text-align: center;
+  margin:5px;
+  padding: 10px;
+}
+
+.home .homebg{
+  height: 400px;
+  width: 600px;
+  margin-top: 15px;
+  background: url("./Components/logo/homebg.jpeg") no-repeat center;
+}
+
+.home .homebg button{
+  text-align: center;
+  margin-top: 25%;
+  margin-left: 42%;
+  background-color: rgba(60, 185, 177, 0.89);
+}
+
+.home .homebg button a{
+  text-decoration: none;
+  color: white;
+}
+
+.container{
+  height: 80%;
+  max-width: 1300px;
+  margin:0px auto;
+  padding: 1.5rem 1rem;
+  /* border: 2px solid red; */
+}
+
+.container .title{
+  font-size: 3.5rem;
+  color: #444;
+  margin-bottom: 2rem;
+  text-transform:uppercase;
+  text-align: center;
+}
+
+.container .product-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(20rem,0.5fr));
+  gap: 0.8rem;
+  /* border: 2px solid blue; */
+}
+
+.container .product-container .product{
+  /* border: 2px solid orange; */
+  height: 95%;
+  width: 95%;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: #fff;
+  box-shadow: 0.3rem 0.5rem rgba(110, 120, 128, 0.774);
+  outline: 0.1rem solid #ccc;
+  outline-offset: -1.5rem;
+  cursor: pointer;
+}
+
+.container .product-container .product:hover{
+  outline: 0.2rem solid #222;
+  outline-offset: 0;
+}
+
+.container .product-container .product img{
+  height: 14rem;
+  width: 15rem;
+  /* border: 2px solid black; */
+}
+
+.container .product-container .product:hover img{
+  transform: scale(1.1);
+}
+
+.container .product-container .product h3{
+  padding: .5rem 0;
+  font-size: 2rem;
+  color: #444;
+}
+
+.container .product-container .product h3:hover{
+  color: #27ae60;
+}
+
+.container .product-container .product .price{
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.container .product-container .product button{
+  margin: 1.5rem 0;
+  padding: .6rem;
+  width: 95%;
+  color:black;
+  background:white;
+  font-size: 1.4rem;
+  border-radius: 10px;
+}
+
+.container .product-container .product button:hover{
+  color: white;
+  background: black;
+}
+
+/* Cart CSS */
+.showItems{
+  margin: 1.5rem;
+  border: 2px solid white;
+  border-radius: 3rem;
+  background-color: rgba(0, 0, 0, 0.792);
+  color: white;
+}
+.showItems .eachItems{
+  /* border: 2px solid rgb(11, 1, 1); */
+  background-color: rgba(255, 255, 255, 0.868);
+  color: black;
+  border-radius: 1.5rem;
+  margin: 2rem;
+  padding: 0.5rem;
+}
+
+/* Responsive Css */
+@media (max-width:991px){
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width:450px){
+  html{
+    font-size: 50%;
+  }
+}
+
+/* Responsive CSS for navbar */
+@media (max-width:1080px){
+  .navbar{
+    height: 6rem;
+    grid-template-columns: 1rem 2fr 3fr 3fr 1rem;
+  }
+  img,
+  .listnings h1,
+  .listnings ul{
+    height: 4rem;
+  }
+}
+
+@media (max-width:980){
+  .navbar{
+    height: 5rem;
+    grid-template-columns: 0.5rem 1fr 2fr 2fr 0.5rem;
+  }
+  .listnings{
+    display: none;
+  }
 }
